@@ -1,0 +1,182 @@
+#login-video{
+position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+
+.log{
+  width: 30%;
+  padding: 30px 20px;
+  position: fixed;
+  top: 40%;
+  left: 35%;
+  background-image: url("./17580-scaled-1150x767.jpg");
+  border: 2px solid;
+  
+}
+
+.login-header{
+  width: 30%;
+  padding: 30px 20px;
+  position: fixed;
+  top: -20%;
+  left: 22%;
+}
+.login-header2{
+    width: 30%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 83%;
+    left: 60%;
+    
+}
+.submit-button{
+    position: fixed;
+    top: 75%;
+    left: 48%;
+    background-color: coral!important;
+}
+.frm{
+    position: fixed;
+    top: 0%;
+    left: 8%;
+    border-style:outset;
+}
+.tbl{
+  position: fixed;
+    top: -10%;
+    left: 45%;
+    color:cornflowerblue;
+
+}
+
+.form-img{
+  background-size: 100% 100%;
+}
+.edit-but{
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.avatar-icon{
+  left: 1585%;
+}
+.add-product-but{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.tbl-pro{
+  border-style:groove;
+  font-family: Tahoma, Verdana, sans-serif;
+
+}
+.add-but{
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color:gainsboro;
+  font-weight: bold;
+}
+.edit-but2{
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color:gainsboro;
+  font-weight: bold;
+}
+.rem-but{
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color:gainsboro;
+  font-weight: bold;
+}
+.photo-but{
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color:gainsboro;
+  font-weight: bold;
+}
+.login-header3{
+  width: 30%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 83%;
+    left: 65%;
+}
+.but-sub{
+  font-family: Tahoma, Verdana, sans-serif;
+  color:black;
+  background-color:gainsboro;
+  width:100px;
+  position: fixed;
+  top: 69%;
+  left: 31%;
+
+}
+.but-frm{
+  background-color:gainsboro!important;
+  width:300px;
+  padding: 10px 10px;
+  position: fixed;
+  top: 55%;
+  left: 31.5%;
+}
+.desc-frm{
+
+  background-color:gainsboro;
+  width:400px;
+  padding: 10px 10px;
+  position:static;
+  top: 25%;
+  left: 21%;
+}
+.pro-frm{
+  background-color:gainsboro!important;
+  width:400px;
+  padding: 10px 10px;
+}
+.edit-but2{
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color:gainsboro!important;
+  font-weight: bold;
+}
+.cancel-but{
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color:gainsboro!important;
+  font-weight: bold;
+}
+.product-img4{
+  width: 30%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 14%;
+    left: 36%;
+}
+.product-img5{
+  width: 30%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 14%;
+    left: 45%;
+}
+.product-img6{
+  width: 30%;
+    padding: 30px 20px;
+    position: fixed;
+    top: 14%;
+    left: 55%;
+}
+
+
+
+
+
+    
+
+
+
