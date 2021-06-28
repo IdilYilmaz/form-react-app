@@ -119,7 +119,7 @@ class MyProducts extends Component {
               product={record}
               updateState={this.updateState}
             />
-            <AddPhotoModal updateState={this.updateState} />
+            <AddPhotoModal updateState={this.updateState} product={record} />
           </Space>
         ),
       },
