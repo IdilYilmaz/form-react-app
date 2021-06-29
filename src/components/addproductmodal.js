@@ -62,8 +62,11 @@ const AddProductModal = (props) => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
-        cancelButtonProps={{ style: { color:"black"} }}
-        okButtonProps={{ style: { color:"black", backgroundColor:"gainsboro"} }}
+        footer={[
+          <Button onClick={() => sendAddProductRequest()}>
+            SUBMIT
+          </Button>,
+        ]}
       >
         <Form name="basic">
           <Form.Item className="pro-frm"
@@ -95,17 +98,6 @@ const AddProductModal = (props) => {
                 setPrice(e.target.value);
               }}
             />
-          </Form.Item>
-          <Form.Item>
-            <Button className="but-sub"
-              type="primary"
-              htmlType="submit"
-              onClick={() => {
-                sendAddProductRequest();
-              }}
-            >
-              Submit
-            </Button>
           </Form.Item>
         </Form>
       </Modal>

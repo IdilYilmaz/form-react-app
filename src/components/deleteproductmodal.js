@@ -45,10 +45,6 @@ const DeleteProductModal = ({ product, updateState }) => {
 
   return (
     <>
-    
-    <div className="product-img5">
-        <img src={img5} width="40" height="40" />
-      </div>
       <Button type="dashed" onClick={showModal} className="rem-but">
         Remove
       </Button>
@@ -57,8 +53,7 @@ const DeleteProductModal = ({ product, updateState }) => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
-        cancelButtonProps={{ style: { color:"black"} }}
-        okButtonProps={{ style: { color:"black", backgroundColor:"gainsboro"} }}
+        footer={[<Button onClick={() => handleOk()}>OK</Button>]}
       >
         Are you sure to remove this product?
       </Modal>

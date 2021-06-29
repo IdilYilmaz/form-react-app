@@ -18,9 +18,6 @@ import AddPhotoModal from "../components/addphotomodal";
 import img2 from "./images/white-abstract-wallpaper_23-2148830027.jpg";
 import img3 from "./images/podo.png";
 
-
-
-
 var wait = false;
 const { SubMenu } = Menu;
 
@@ -75,11 +72,8 @@ class MyProducts extends Component {
     });
     console.log(imageList);
 
-    if( imageList.length > 0)
-      return <img height={30} src={imageList[0]}/>
-    else
-      return 'No image found';
-
+    if (imageList.length > 0) return <img height={30} src={imageList[0]} />;
+    else return "No image found";
   }
 
   render() {
@@ -126,26 +120,28 @@ class MyProducts extends Component {
     ];
 
     return (
-      <div>
-        <div className="form-img" >
-          <img src={img2}  width="1278" height="609">
-            </img>
+      <div className="body">
+        
+        <div>
+          <div className="form_header"></div>
         </div>
-        <div className="login-header3">
-        <img src={img3} width="70" height="70" />
-      </div>
 
-        <div className="frm" style={{ width: "65%", height: "100%" }}>
-          <a href={this.props.location.state.formURL} target="_blank"><h1><i><b>FORM TITLE: {this.props.location.state.formTitle}</b></i></h1></a>
-          <br />
-          --------
+        <div className="frm" >
+          <a href={this.props.location.state.formURL} target="_blank">
+            <h1>
+              <i>
+                <b>FORM TITLE: {this.props.location.state.formTitle}</b>
+              </i>
+            </h1>
+          </a>
           <div className="tbl-pro2">
-          <Table className="tbl-pro"
-            dataSource={this.state.keko}
-            columns={columns}
-            rowKey="pid"
-            pagination={false}
-          />
+            <Table
+              className="tbl-pro"
+              dataSource={this.state.keko}
+              columns={columns}
+              rowKey="pid"
+              pagination={false}
+            />
           </div>
           {/*<Button onClick={ () => { this.setState({showAddProductModal: true}) } } >ADD NEW PRODUCT</Button>*/}
           {/*<view>{(this.state.showAddProductModal === true) ? (this.renderAddProductModal()) : '' }</view>*/}

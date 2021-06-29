@@ -44,7 +44,9 @@ const EditProductModal = ({ product, updateState }) => {
       url:
         "https://m-efe.jotform.dev/intern-api/form/" +
         localStorage.getItem("formId") +
-        "/products/" + product.pid + "/edit",
+        "/products/" +
+        product.pid +
+        "/edit",
       data: bodyFromData,
     })
       .then(function (response) {
@@ -59,21 +61,18 @@ const EditProductModal = ({ product, updateState }) => {
   };
 
   return (
-    
     <>
-    <div className="product-img4">
-        <img src={img4} width="40" height="40" />
-      </div>
-      <Button type="dashed" onClick={showModal} className="edit-but2" >
+      <Button type="dashed" onClick={showModal} className="edit-but2">
         Edit Product
       </Button>
       <Modal
         title="Edit Product"
         visible={isModalVisible}
-        onOk={handleOk} 
+        onOk={handleOk}
         onCancel={handleCancel}
-        cancelButtonProps={{ style: { color:"black"} }}
-        okButtonProps={{ style: { color:"black", backgroundColor:"gainsboro"} }}
+        footer={[
+          <Button onClick={() => sendEditProductRequest()}>SUBMIT</Button>,
+        ]}
       >
         <Form
           name="basic"
@@ -83,7 +82,8 @@ const EditProductModal = ({ product, updateState }) => {
             ["price"]: price,
           }}
         >
-          <Form.Item className="pro-frm"
+          <Form.Item
+            className="pro-frm"
             label="Product Name"
             name="name"
             rules={[
@@ -99,7 +99,11 @@ const EditProductModal = ({ product, updateState }) => {
               }}
             />
           </Form.Item>
-          <Form.Item label="Description" name="description" className="desc-frm">
+          <Form.Item
+            label="Description"
+            name="description"
+            className="desc-frm"
+          >
             <Input
               onChange={(e) => {
                 setDescription(e.target.value);
@@ -112,17 +116,6 @@ const EditProductModal = ({ product, updateState }) => {
                 setPrice(e.target.value);
               }}
             />
-          </Form.Item>
-          <Form.Item>
-            <Button className="but-sub"
-              type="dashed"
-              htmlType="submit"
-              onClick={() => {
-                sendEditProductRequest();
-              }}
-            >
-              Submit
-            </Button>
           </Form.Item>
         </Form>
       </Modal>

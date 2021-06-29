@@ -16,6 +16,7 @@ import { Table, Tag, Space } from "antd";
 import img1 from "./images/podo.png";
 import img2 from "./images/white-abstract-wallpaper_23-2148830027.jpg";
 import img3 from "./images/icon-for-editing-14.jpg";
+import logo from "./images/jotform_logo.png";
 
 var wait = false;
 const { SubMenu } = Menu;
@@ -68,13 +69,21 @@ class MyForms extends Component {
   renderListButton(item) {
     if (item.isProductForm) {
       return (
-        <Button onClick={() => this.handleFormItem(item)} type="link" className="edit-but">
+        <Button
+          onClick={() => this.handleFormItem(item)}
+          type="link"
+          className="edit-but"
+        >
           EDIT PRODUCT LIST
         </Button>
       );
     } else {
       return (
-        <Button onClick={() => this.handleFormItem(item)} type="link" className="add-product-but">
+        <Button
+          onClick={() => this.handleFormItem(item)}
+          type="link"
+          className="add-product-but"
+        >
           ADD PRODUCT LIST
         </Button>
       );
@@ -105,19 +114,33 @@ class MyForms extends Component {
 
   render() {
     return (
-      <div>
-        <div className="form-img" >
-          <img src={img2}  width="1278" height="609">
-            </img>
+      <div id="root">
+        <div>
+          <div className="form_header">
+            <div className="header_logo">
+              <img src={logo} height="40px"></img>
+            </div>
+          </div>
         </div>
 
-        <div className="frm" style={{ width: "53%", height: "100%" }}>
+        <div className="frm">
           {this.state.dt.map((item, i) => (
             <List.Item key={item.id}>
               <List.Item.Meta
                 className="lst"
-                avatar={<Avatar shape="square" size={28} src={img3} className="avatar-icon" />}
-                title={<a href={item.url} target="_blank">{item.title}</a>}
+                avatar={
+                  <Avatar
+                    shape="square"
+                    size={28}
+                    src={img3}
+                    className="avatar-icon"
+                  />
+                }
+                title={
+                  <a href={item.url} target="_blank">
+                    {item.title}
+                  </a>
+                }
               />
               {this.renderListButton(item)}
             </List.Item>

@@ -1,21 +1,20 @@
-#login-video{
-position: fixed;
+#login-video {
+  position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
 }
 video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
-
-.log{
+.log {
   width: 30%;
   padding: 30px 20px;
   position: fixed;
@@ -23,160 +22,161 @@ video {
   left: 35%;
   background-image: url("./17580-scaled-1150x767.jpg");
   border: 2px solid;
-  
 }
 
-.login-header{
+.login-header {
   width: 30%;
   padding: 30px 20px;
   position: fixed;
   top: -20%;
   left: 22%;
 }
-.login-header2{
-    width: 30%;
-    padding: 30px 20px;
-    position: fixed;
-    top: 83%;
-    left: 60%;
-    
-}
-.submit-button{
-    position: fixed;
-    top: 75%;
-    left: 48%;
-    background-color: coral!important;
-}
-.frm{
-    position: fixed;
-    top: 0%;
-    left: 8%;
-    border-style:outset;
-}
-.tbl{
+.login-header2 {
+  width: 30%;
+  padding: 30px 20px;
   position: fixed;
-    top: -10%;
-    left: 45%;
-    color:cornflowerblue;
-
+  top: 83%;
+  left: 60%;
+}
+.submit-button {
+  top: 75%;
+  left: 48%;
+  background-color: coral !important;
+}
+.frm {
+  width: 52%;
+  /*height: 100%;*/
+  margin: 12px auto;
+  background-color: white;
+  padding: 14px;
+  border-radius: 3px;
+  border: 1px solid #E8E8E8;
+}
+.form_header{
+  height: 80px;
+  background-color: #283041;
+  display: block;
+  width: 100%;
+}
+.tbl {
+  position: fixed;
+  top: -10%;
+  left: 45%;
+  color: cornflowerblue;
 }
 
-.form-img{
+.form-img {
   background-size: 100% 100%;
 }
-.edit-but{
-  color:black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+.edit-but {
+  background: rgb(155, 89, 182);
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
 }
-.avatar-icon{
+.avatar-icon {
   left: 1585%;
 }
-.add-product-but{
-  font-family: Arial, Helvetica, sans-serif;
+.add-product-but {
+  background: rgb(121, 163, 226);
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.tbl-pro {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+.add-but {
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color: gainsboro;
   font-weight: bold;
 }
-.tbl-pro{
-  border-style:groove;
+.edit-but2 {
   font-family: Tahoma, Verdana, sans-serif;
-
-}
-.add-but{
-  font-family: Tahoma, Verdana, sans-serif;
-  background-color:gainsboro;
+  background-color: gainsboro;
   font-weight: bold;
 }
-.edit-but2{
+.rem-but {
   font-family: Tahoma, Verdana, sans-serif;
-  background-color:gainsboro;
+  background-color: gainsboro;
   font-weight: bold;
 }
-.rem-but{
+.photo-but {
   font-family: Tahoma, Verdana, sans-serif;
-  background-color:gainsboro;
+  background-color: gainsboro;
   font-weight: bold;
 }
-.photo-but{
-  font-family: Tahoma, Verdana, sans-serif;
-  background-color:gainsboro;
-  font-weight: bold;
-}
-.login-header3{
+.login-header3 {
   width: 30%;
-    padding: 30px 20px;
-    position: fixed;
-    top: 83%;
-    left: 65%;
-}
-.but-sub{
-  font-family: Tahoma, Verdana, sans-serif;
-  color:black;
-  background-color:gainsboro;
-  width:100px;
+  padding: 30px 20px;
   position: fixed;
+  top: 83%;
+  left: 65%;
+}
+.but-sub {
+  font-family: Tahoma, Verdana, sans-serif;
+  color: black;
+  background-color: gainsboro;
+  width: 100px;
   top: 69%;
   left: 31%;
-
 }
-.but-frm{
-  background-color:gainsboro!important;
-  width:300px;
+.but-frm {
+  background-color: gainsboro !important;
+  width: 300px;
   padding: 10px 10px;
-  position: fixed;
   top: 55%;
   left: 31.5%;
 }
-.desc-frm{
-
-  background-color:gainsboro;
-  width:400px;
+.desc-frm {
+  background-color: gainsboro;
+  width: 400px;
   padding: 10px 10px;
-  position:static;
+  position: static;
   top: 25%;
   left: 21%;
 }
-.pro-frm{
-  background-color:gainsboro!important;
-  width:400px;
+.pro-frm {
+  background-color: gainsboro !important;
+  width: 400px;
   padding: 10px 10px;
 }
-.edit-but2{
+.edit-but2 {
   font-family: Tahoma, Verdana, sans-serif;
-  background-color:gainsboro!important;
+  background-color: gainsboro !important;
   font-weight: bold;
 }
-.cancel-but{
+.cancel-but {
   font-family: Tahoma, Verdana, sans-serif;
-  background-color:gainsboro!important;
+  background-color: gainsboro !important;
   font-weight: bold;
 }
-.product-img4{
+.product-img4 {
   width: 30%;
-    padding: 30px 20px;
-    position: fixed;
-    top: 14%;
-    left: 36%;
+  padding: 30px 20px;
+  position: fixed;
+  top: 14%;
+  left: 36%;
 }
-.product-img5{
+.product-img5 {
   width: 30%;
-    padding: 30px 20px;
-    position: fixed;
-    top: 14%;
-    left: 45%;
+  padding: 30px 20px;
+  position: fixed;
+  top: 14%;
+  left: 45%;
 }
-.product-img6{
+.product-img6 {
   width: 30%;
-    padding: 30px 20px;
-    position: fixed;
-    top: 14%;
-    left: 55%;
+  padding: 30px 20px;
+  position: fixed;
+  top: 14%;
+  left: 55%;
 }
-
-
-
-
-
-    
-
-
-
+#root {
+  background-color: #F7F7F8;
+  width: 100%;
+  padding-bottom: 12px;
+}
+.header_logo{
+  vertical-align: middle;
+}

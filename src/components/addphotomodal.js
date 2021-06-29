@@ -13,7 +13,7 @@ const AddPhotoModal = ({ product, updateState }) => {
   };
 
   const handleOk = () => {
-   // console.log(base64Image);
+    // console.log(base64Image);
     setIsModalVisible(false);
   };
 
@@ -22,18 +22,18 @@ const AddPhotoModal = ({ product, updateState }) => {
   };
 
   const sendAddPhotoRequest = () => {
-    
     if (base64Image === "") return;
 
     console.log("ADD PHOTO REQUEST IS SENT");
 
     const images = product.images;
-    let newImageList = ""; 
+    let newImageList = "";
 
-    if (images.length <= 2){
+    if (images.length <= 2) {
       newImageList = '["' + base64Image + '"]';
     } else {
-      newImageList = images.substring(0, images.length-1) + ',"' + base64Image + '"]';
+      newImageList =
+        images.substring(0, images.length - 1) + ',"' + base64Image + '"]';
     }
 
     var bodyFromData = new FormData();
@@ -45,7 +45,9 @@ const AddPhotoModal = ({ product, updateState }) => {
       url:
         "https://m-efe.jotform.dev/intern-api/form/" +
         localStorage.getItem("formId") +
-        "/products/" + product.pid + "/edit",
+        "/products/" +
+        product.pid +
+        "/edit",
       data: bodyFromData,
     })
       .then(function (response) {
@@ -56,6 +58,7 @@ const AddPhotoModal = ({ product, updateState }) => {
         console.log(err);
       });
 
+    setIsModalVisible(false);
   };
 
   const getBase64Url = (file) => {
@@ -77,9 +80,6 @@ const AddPhotoModal = ({ product, updateState }) => {
 
   return (
     <>
-      <div className="product-img6">
-        <img src={img6} width="40" height="40" />
-      </div>
       <Button type="dashed" onClick={showModal} className="photo-but">
         Add New Photo
       </Button>
@@ -88,10 +88,11 @@ const AddPhotoModal = ({ product, updateState }) => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
-        cancelButtonProps={{ style: { color: "black" } }}
-        okButtonProps={{
-          style: { color: "black", backgroundColor: "gainsboro" },
-        }}
+        footer={[
+          <Button key="back" onClick={() => sendAddPhotoRequest()}>
+            SAVE PHOTO
+          </Button>,
+        ]}
       >
         <input
           id="image"
@@ -99,7 +100,6 @@ const AddPhotoModal = ({ product, updateState }) => {
           onChange={(event) => getBase64Url(event.target.files[0])}
           accept="image/*"
         />
-        <Button onClick={() => sendAddPhotoRequest()}>SAVE PHOTO</Button>
       </Modal>
     </>
   );
