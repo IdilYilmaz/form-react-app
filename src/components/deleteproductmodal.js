@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Form, Input } from "antd";
 import axios from "axios";
 import img5 from "./images2/remove-icon-png-7131.png";
+import deleteicon from "../pages/images/delete_icon.png";
 
 const DeleteProductModal = ({ product, updateState }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -45,9 +46,9 @@ const DeleteProductModal = ({ product, updateState }) => {
 
   return (
     <>
-      <Button type="dashed" onClick={showModal} className="rem-but">
-        Remove
-      </Button>
+      {/*<Button type="dashed" onClick={showModal} className="rem-but">
+        Remove</Button>*/}
+      <img src={deleteicon} onClick={showModal} width="25px" height="25px"></img>
       <Modal
         title="Delete Product"
         visible={isModalVisible}

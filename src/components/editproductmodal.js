@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Form, Input } from "antd";
 import axios from "axios";
 import img4 from "./images2/389-3895405_png-file-edit-icon-circle-clipart.png";
+import editicon from "../pages/images/edit_icon.png";
 
 const EditProductModal = ({ product, updateState }) => {
   const [name, setName] = useState(product.name);
@@ -62,9 +63,10 @@ const EditProductModal = ({ product, updateState }) => {
 
   return (
     <>
-      <Button type="dashed" onClick={showModal} className="edit-but2">
+      {/*<Button type="dashed" onClick={showModal} className="edit-but2">
         Edit Product
-      </Button>
+  </Button>*/}
+      <img src={editicon} onClick={showModal} width="25px" height="25px"></img>
       <Modal
         title="Edit Product"
         visible={isModalVisible}

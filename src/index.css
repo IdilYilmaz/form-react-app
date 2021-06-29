@@ -56,9 +56,6 @@ video {
 .avatar-icon {
   left: 1585%;
 }
-.tbl-pro {
-  font-family: Tahoma, Verdana, sans-serif;
-}
 .add-but {
   font-family: Tahoma, Verdana, sans-serif;
   background-color: gainsboro;
@@ -193,4 +190,11 @@ video {
 }
 .table-title-item{
   padding: 14px;
+}
+.tbl-pro {
+  font-family: Tahoma, Verdana, sans-serif;
+  padding: 16px;
+}
+.add-pro-mod {
+  margin-top: 12px;
 }

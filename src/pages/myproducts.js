@@ -136,19 +136,22 @@ class MyProducts extends Component {
           <div className="table-title">
             <List.Item key="form-table" className="table-title-item">
               <List.Item.Meta title={<a href={this.props.location.state.formURL} target="_blank">FORM TITLE: {this.props.location.state.formTitle}</a>} />
-              <img src={backicon} onClick={() => {history.goBack()}}></img>
+                <img src={backicon} onClick={() => {history.goBack()}}></img> 
+                <span><List.Item.Meta title="BACK" /></span>
             </List.Item>
           </div>
-          <div className="tbl-pro2">
+          <div className="tbl-pro">
             <Table
-              className="tbl-pro"
               dataSource={this.state.keko}
               columns={columns}
               rowKey="pid"
               pagination={false}
             />
+            <div className="add-pro-mod">
+              <AddProductModal updateState={this.updateState} />
+            </div>
           </div>
-          <AddProductModal updateState={this.updateState} />
+          
         </div>
       </div>
     );

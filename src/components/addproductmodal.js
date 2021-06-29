@@ -54,7 +54,7 @@ const AddProductModal = (props) => {
 
   return (
     <>
-      <Button type="dashed" onClick={showModal} className="edit-but2">
+      <Button onClick={showModal} className="add-product-but">
         Add New Product
       </Button>
       <Modal

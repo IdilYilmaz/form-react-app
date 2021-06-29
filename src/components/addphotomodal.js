@@ -3,6 +3,7 @@ import { Modal, Button, Form, Input } from "antd";
 import axios from "axios";
 import MyProducts from "../pages/myproducts";
 import img6 from "./images2/add-camera-icon-icon-add-11553485583calilemiyg.png";
+import addphotoicon from "../pages/images/add_photo_icon.png";
 
 const AddPhotoModal = ({ product, updateState }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -80,9 +81,10 @@ const AddPhotoModal = ({ product, updateState }) => {
 
   return (
     <>
-      <Button type="dashed" onClick={showModal} className="photo-but">
+      {/*<Button type="dashed" onClick={showModal} className="photo-but">
         Add New Photo
-      </Button>
+  </Button>*/}
+      <img src={addphotoicon} onClick={showModal} width="25px" height="25px"></img>
       <Modal
         title="Add New Photo"
         visible={isModalVisible}
