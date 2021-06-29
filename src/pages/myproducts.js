@@ -140,8 +140,7 @@ class MyProducts extends Component {
           <div className="table-title">
             <List.Item key="form-table" className="table-title-item">
               <List.Item.Meta title={<a href={this.props.location.state.formURL} target="_blank">FORM TITLE: {this.props.location.state.formTitle}</a>} />
-                <img src={backicon} onClick={() => {history.goBack()}}></img> 
-                <span><List.Item.Meta title="BACK" /></span>
+              <Button id="back_but"><img src={backicon} onClick={() => {history.goBack()}}></img>BACK</Button>
             </List.Item>
           </div>
           <div className="tbl-pro">

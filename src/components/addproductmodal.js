@@ -69,7 +69,7 @@ const AddProductModal = (props) => {
         ]}
       >
         <Form name="basic">
-          <Form.Item className="pro-frm"
+          <Form.Item className="add_frm_item"
             label="Product Name"
             name="name"
             rules={[
@@ -85,14 +85,14 @@ const AddProductModal = (props) => {
               }}
             />
           </Form.Item>
-          <Form.Item label="Description" name="description" className="desc-frm">
+          <Form.Item label="Description" name="description" className="add_frm_item">
             <Input
               onChange={(e) => {
                 setDescription(e.target.value);
               }}
             />
           </Form.Item>
-          <Form.Item label="Price" name="price" className="but-frm">
+          <Form.Item label="Price" name="price" className="add_frm_item">
             <Input
               onChange={(e) => {
                 setPrice(e.target.value);

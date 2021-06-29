@@ -196,6 +196,11 @@ video {
   border: none;
   color: white;
 }
+#back_but {
+  background: transparent;
+  border: none;
+  margin-bottom: 12px;
+}
 .table-item {
   border-bottom: 1px solid #f4f4f4;
   /*margin: 2px 14px 0px 14px;*/
@@ -213,4 +218,13 @@ video {
 }
 .add-pro-mod {
   margin-top: 12px;
+}
+.edit_frm_item {
+  display: flex;
+}
+.add_frm_item {
+  display: flex;
+}
+.ant-form-item-label>label {
+  width: 120px;
 }

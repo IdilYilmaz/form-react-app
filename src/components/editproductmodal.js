@@ -85,7 +85,7 @@ const EditProductModal = ({ product, updateState }) => {
           }}
         >
           <Form.Item
-            className="pro-frm"
+            className="edit_frm_item"
             label="Product Name"
             name="name"
             rules={[
@@ -104,7 +104,7 @@ const EditProductModal = ({ product, updateState }) => {
           <Form.Item
             label="Description"
             name="description"
-            className="desc-frm"
+            className="edit_frm_item"
           >
             <Input
               onChange={(e) => {
@@ -112,7 +112,7 @@ const EditProductModal = ({ product, updateState }) => {
               }}
             />
           </Form.Item>
-          <Form.Item label="Price" name="price" className="but-frm">
+          <Form.Item label="Price" name="price" className="edit_frm_item">
             <Input
               onChange={(e) => {
                 setPrice(e.target.value);
