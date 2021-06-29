@@ -17,6 +17,9 @@ import DeleteProductModal from "../components/deleteproductmodal";
 import AddPhotoModal from "../components/addphotomodal";
 import img2 from "./images/white-abstract-wallpaper_23-2148830027.jpg";
 import img3 from "./images/podo.png";
+import logo from "./images/jotform_logo_white.png";
+import backicon from "./images/back_icon.png";
+import { useHistory } from "react-router-dom";
 
 var wait = false;
 const { SubMenu } = Menu;
@@ -120,20 +123,22 @@ class MyProducts extends Component {
     ];
 
     return (
-      <div className="body">
-        
+      <div id="root">
         <div>
-          <div className="form_header"></div>
+          <div className="form_header">
+            <div className="header_logo">
+              <img id="header_logo_img" src={logo}></img>
+            </div>
+          </div>
         </div>
 
-        <div className="frm" >
-          <a href={this.props.location.state.formURL} target="_blank">
-            <h1>
-              <i>
-                <b>FORM TITLE: {this.props.location.state.formTitle}</b>
-              </i>
-            </h1>
-          </a>
+        <div className="frm">
+          <div className="table-title">
+            <List.Item key="form-table" className="table-title-item">
+              <List.Item.Meta title={<a href={this.props.location.state.formURL} target="_blank">FORM TITLE: {this.props.location.state.formTitle}</a>} />
+              <img src={backicon} onClick={() => {history.goBack()}}></img>
+            </List.Item>
+          </div>
           <div className="tbl-pro2">
             <Table
               className="tbl-pro"
@@ -143,8 +148,6 @@ class MyProducts extends Component {
               pagination={false}
             />
           </div>
-          {/*<Button onClick={ () => { this.setState({showAddProductModal: true}) } } >ADD NEW PRODUCT</Button>*/}
-          {/*<view>{(this.state.showAddProductModal === true) ? (this.renderAddProductModal()) : '' }</view>*/}
           <AddProductModal updateState={this.updateState} />
         </div>
       </div>

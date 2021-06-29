@@ -16,7 +16,7 @@ import { Table, Tag, Space } from "antd";
 import img1 from "./images/podo.png";
 import img2 from "./images/white-abstract-wallpaper_23-2148830027.jpg";
 import img3 from "./images/icon-for-editing-14.jpg";
-import logo from "./images/jotform_logo.png";
+import logo from "./images/jotform_logo_white.png";
 
 var wait = false;
 const { SubMenu } = Menu;
@@ -74,7 +74,7 @@ class MyForms extends Component {
           type="link"
           className="edit-but"
         >
-          EDIT PRODUCT LIST
+          EDIT
         </Button>
       );
     } else {
@@ -118,24 +118,21 @@ class MyForms extends Component {
         <div>
           <div className="form_header">
             <div className="header_logo">
-              <img id="header_logo_img" src={logo} ></img>
+              <img id="header_logo_img" src={logo}></img>
             </div>
           </div>
         </div>
 
         <div className="frm">
+          <div className="table-title">
+            <List.Item key="form-table" className="table-title-item">
+              <List.Item.Meta title="MY FORMS" />
+            </List.Item>
+          </div>
           {this.state.dt.map((item, i) => (
-            <List.Item key={item.id}>
+            <List.Item key={item.id} className="table-item">
               <List.Item.Meta
                 className="lst"
-                avatar={
-                  <Avatar
-                    shape="square"
-                    size={28}
-                    src={img3}
-                    className="avatar-icon"
-                  />
-                }
                 title={
                   <a href={item.url} target="_blank">
                     {item.title}
