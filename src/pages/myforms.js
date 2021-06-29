@@ -118,7 +118,7 @@ class MyForms extends Component {
         <div>
           <div className="form_header">
             <div className="header_logo">
-              <img src={logo} height="40px"></img>
+              <img id="header_logo_img" src={logo} ></img>
             </div>
           </div>
         </div>
