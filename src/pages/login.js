@@ -14,7 +14,7 @@ const Login = () => {
 
   const sendLoginRequest = () => {
     if (username === "" || password === "") return;
-    /*
+    
     var bodyFromData = new FormData();
     bodyFromData.append("username", username);
     bodyFromData.append("password", password);
@@ -27,15 +27,20 @@ const Login = () => {
       .then(function (response) {
         const apiKey = response.data.content["appKey"];
         localStorage.setItem("apiKey", apiKey);
+        localStorage.setItem("name", response.data.content["name"]);
+        localStorage.setItem("avatarUrl", response.data.content["avatarUrl"]);
+        console.log(response);
         window.location.pathname = "/forms";
       })
       .catch(function (err) {
         console.log(err);
       });
-      */
+      
 
+      /*
     localStorage.setItem("apiKey", "c9058ea723befc280bdb13b7e542c321");
     window.location.pathname = "/forms";
+    */
   };
 
   return (

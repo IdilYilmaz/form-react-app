@@ -120,6 +120,9 @@ class MyForms extends Component {
             <div className="header_logo">
               <img id="header_logo_img" src={logo}></img>
             </div>
+            <div className="header_avatar">
+              <img id="header_avatar_img" src={localStorage.getItem("avatarUrl")}></img>
+            </div>
           </div>
         </div>
 

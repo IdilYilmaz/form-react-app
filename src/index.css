@@ -147,10 +147,6 @@ video {
   width: 100%;
   padding-bottom: 12px;
 }
-#header_logo_img {
-  height: 26px;
-  margin: 16px 20px 16px 18px;
-}
 .frm {
   width: 52%;
   /*height: 100%;*/
@@ -163,8 +159,18 @@ video {
 .form_header{
   height: 60px;
   background-color: #0A1551;
-  display: block;
+  display: flex;
+  flex-shrink: 2;
   width: 100%;
+  justify-content: space-between;
+}
+#header_logo_img {
+  height: 26px;
+  margin: 16px 20px 16px 18px;
+}
+#header_avatar_img {
+  height: 40px;
+  margin: 10px 20px 10px 10px
 }
 .edit-but {
   background-color: #1E9DEA;
