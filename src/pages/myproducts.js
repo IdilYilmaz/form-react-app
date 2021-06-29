@@ -129,6 +129,10 @@ class MyProducts extends Component {
             <div className="header_logo">
               <img id="header_logo_img" src={logo}></img>
             </div>
+            <div className="header_avatar">
+              <Button id="logout_but">LOGOUT</Button>
+              <img id="header_avatar_img" src={localStorage.getItem("avatarUrl")}></img>
+            </div>
           </div>
         </div>
 

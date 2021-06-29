@@ -143,7 +143,7 @@ video {
   left: 55%;
 }
 #root {
-  background-color: #E4E6F2;
+  background-color: #e4e6f2;
   width: 100%;
   padding-bottom: 12px;
 }
@@ -154,11 +154,11 @@ video {
   background-color: white;
   /*padding: 14px;*/
   border-radius: 2px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
 }
-.form_header{
+.form_header {
   height: 60px;
-  background-color: #0A1551;
+  background-color: #0a1551;
   display: flex;
   flex-shrink: 2;
   width: 100%;
@@ -170,31 +170,41 @@ video {
 }
 #header_avatar_img {
   height: 40px;
-  margin: 10px 20px 10px 10px
+  margin: 10px 20px 10px 10px;
+  border-radius: 50%;
+}
+.header_avatar {
+  display: flex;
+  align-items: center;
 }
 .edit-but {
-  background-color: #1E9DEA;
+  background-color: #1e9dea;
   height: 32px;
   color: #fff;
   font-size: 13px;
   border-radius: 3px;
 }
 .add-product-but {
-  background-color: #0A1551;
+  background-color: #0a1551;
   height: 32px;
   color: #fff;
   font-size: 13px;
   border-radius: 3px;
 }
+#logout_but {
+  background: transparent;
+  border: none;
+  color: white;
+}
 .table-item {
-  border-bottom: 1px solid #F4F4F4;
+  border-bottom: 1px solid #f4f4f4;
   /*margin: 2px 14px 0px 14px;*/
   padding: 14px;
 }
 .table-title {
   background-color: #f4f6ff;
 }
-.table-title-item{
+.table-title-item {
   padding: 14px;
 }
 .tbl-pro {
