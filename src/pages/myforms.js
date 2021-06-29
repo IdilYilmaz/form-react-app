@@ -94,6 +94,11 @@ class MyForms extends Component {
     console.log("click", e);
   }
 
+  logout() {
+    localStorage.clear();
+    window.location.pathname = "/login";
+  }
+
   async componentDidMount() {
     try {
       var response = await axios.get(
@@ -121,7 +126,7 @@ class MyForms extends Component {
               <img id="header_logo_img" src={logo}></img>
             </div>
             <div className="header_avatar">
-              <Button id="logout_but">LOGOUT</Button>
+              <Button id="logout_but" onClick={() => {this.logout()}}>LOGOUT</Button>
               <img id="header_avatar_img" src={localStorage.getItem("avatarUrl")}></img>
             </div>
           </div>
