@@ -128,7 +128,7 @@ class MyProducts extends Component {
     ];
 
     return (
-      <div id="root">
+      <div  className="frm-wrap-frmproduct" style={{paddingBottom:"10px"}}>
         <div>
           <div className="form_header">
             <div className="header_logo">
