@@ -117,11 +117,11 @@ class MyProducts extends Component {
         render: (text, record) => (
           <Space size="middle">
             <EditProductModal product={record} updateState={this.updateState} />
+            <AddPhotoModal updateState={this.updateState} product={record} />
             <DeleteProductModal
               product={record}
               updateState={this.updateState}
             />
-            <AddPhotoModal updateState={this.updateState} product={record} />
           </Space>
         ),
       },
@@ -135,8 +135,18 @@ class MyProducts extends Component {
               <img id="header_logo_img" src={logo}></img>
             </div>
             <div className="header_avatar">
-              <Button id="logout_but" onClick={() => {this.logout()}}>LOGOUT</Button>
-              <img id="header_avatar_img" src={localStorage.getItem("avatarUrl")}></img>
+              <Button
+                id="logout_but"
+                onClick={() => {
+                  this.logout();
+                }}
+              >
+                LOGOUT
+              </Button>
+              <img
+                id="header_avatar_img"
+                src={localStorage.getItem("avatarUrl")}
+              ></img>
             </div>
           </div>
         </div>
@@ -144,8 +154,21 @@ class MyProducts extends Component {
         <div className="frm">
           <div className="table-title">
             <List.Item key="form-table" className="table-title-item">
-              <List.Item.Meta title={<a href={this.props.location.state.formURL} target="_blank">FORM TITLE: {this.props.location.state.formTitle}</a>} />
-              <Button id="back_but"><img src={backicon} onClick={() => {history.goBack()}}></img>BACK</Button>
+              <List.Item.Meta
+                title={
+                  <a href={this.props.location.state.formURL} target="_blank">
+                    FORM TITLE: {this.props.location.state.formTitle}
+                  </a>
+                }
+              />
+              <Button
+                id="back_but"
+                onClick={() => {
+                  history.goBack();
+                }}
+              >
+                <img src={backicon} width="36px" height="36px"></img>BACK
+              </Button>
             </List.Item>
           </div>
           <div className="tbl-pro">
@@ -154,12 +177,12 @@ class MyProducts extends Component {
               columns={columns}
               rowKey="pid"
               pagination={false}
+              style={{ fontWeight: "normal" }}
             />
             <div className="add-pro-mod">
               <AddProductModal updateState={this.updateState} />
             </div>
           </div>
-          
         </div>
       </div>
     );

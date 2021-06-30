@@ -37,13 +37,16 @@ const Login = () => {
         console.log(err);
       });
 
-    /*
+    
+   /*
     localStorage.setItem("apiKey", "c9058ea723befc280bdb13b7e542c321");
     window.location.pathname = "/forms";
     */
+    
   };
 
   return (
+    <div class="login-wrap-2" style={{paddingTop:"60px"}}>
     <div class="login-wrap">
       <div class="login-html">
         <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
@@ -53,10 +56,10 @@ const Login = () => {
         <div class="login-form">
           <div class="sign-in-htm">
             <img src={img2} width="200" height="40" className="im" />
-            <p>
-              <h2 style={{ color: "#0A1551" }}>Fast Inventory Application</h2>
+            <p style={{ marginBottom: "0" }}>
+              <h2 style={{ color: "#0A1551", marginTop: "12px" }}>Fast Inventory Application</h2>
             </p>
-            <p style={{ color: "#0A1551" }}>
+            <p style={{ color: "#0A1551", fontWeight: "normal", paddingBottom: "12px" }}>
               Collect response, payment and signature with your forms
             </p>
 
@@ -68,6 +71,7 @@ const Login = () => {
                 id="user"
                 type="text"
                 class="input"
+                required
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
@@ -79,6 +83,7 @@ const Login = () => {
                 id="pass"
                 type="password"
                 class="input"
+                required
                 data-type="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -90,7 +95,7 @@ const Login = () => {
                 class="check"
                 valuPropName="checked"
               />
-              <label for="check" style={{ color: "#0A1551" }}>
+              <label for="check" style={{ color: "#0A1551", display:"flex" }}>
                 <span
                   class="icon"
                   style={{
@@ -109,10 +114,10 @@ const Login = () => {
                 onClick={() => sendLoginRequest()}
               />
             </div>
-            <div class="hr"></div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
