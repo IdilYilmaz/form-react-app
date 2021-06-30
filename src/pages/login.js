@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { Form, Input, Button, Checkbox } from "antd";
-import img1 from "./images/jotform-logo-transparent-800x400.png";
-import img2 from "./images/podo.png";
+import { Form, Input, Button, Checkbox, Row, Col } from "antd";
+import img1 from "./images/fast-inventory_banner.png";
+import img2 from "./images/Group_1835.png";
 import vid1 from "./images/gettyimages-1297019186-640_adpp.mp4";
 import axios from "axios";
 import { reject } from "async";
 import Password from "antd/lib/input/Password";
+import login from "./login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -14,11 +15,11 @@ const Login = () => {
 
   const sendLoginRequest = () => {
     if (username === "" || password === "") return;
-    
+
     var bodyFromData = new FormData();
     bodyFromData.append("username", username);
     bodyFromData.append("password", password);
-    
+
     axios({
       method: "post",
       url: "https://m-efe.jotform.dev/intern-api/user/login",
@@ -35,70 +36,82 @@ const Login = () => {
       .catch(function (err) {
         console.log(err);
       });
-      
 
-      /*
+    /*
     localStorage.setItem("apiKey", "c9058ea723befc280bdb13b7e542c321");
     window.location.pathname = "/forms";
     */
   };
 
   return (
-    <div>
-      <div className="login-video">
-        <video autoPlay loop muted>
-          <source src={vid1} type="video/mp4" />
-        </video>
-      </div>
-      <div className="login-header">
-        <img src={img1} alt="" width="700" height="400" />
-      </div>
-      <div className="login-header2">
-        <img src={img2} width="50" height="50" />
-      </div>
-      <div className="log">
-        <Form name="basic">
-          <Form.Item
-            label="Username"
-            name="username"
-            rules={[
-              {
-                required: true,
-                message: "Please input your username!",
-              },
-            ]}
-          >
-            <Input onChange={(e) => setUsername(e.target.value)} />
-          </Form.Item>
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: "Please input your password!",
-              },
-            ]}
-          >
-            <Input.Password onChange={(e) => setPassword(e.target.value)} />
-          </Form.Item>
+    <div class="login-wrap">
+      <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
+        <label for="tab-1" class="tab"></label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up" />
+        <label for="tab-2" class="tab" display="none"></label>
+        <div class="login-form">
+          <div class="sign-in-htm">
+            <img src={img2} width="200" height="40" className="im" />
+            <p>
+              <h2 style={{ color: "#0A1551" }}>Fast Inventory Application</h2>
+            </p>
+            <p style={{ color: "#0A1551" }}>
+              Collect response, payment and signature with your forms
+            </p>
 
-          <Form.Item name="remember" valuePropName="checked">
-            <Checkbox>Remember Me</Checkbox>
-          </Form.Item>
-
-          <Form.Item>
-            <Button
-              variant="btn btn-success"
-              type="primary"
-              htmlType="submit"
-              className="submit-button"
-              onClick={() => sendLoginRequest()}
-            >
-              SUBMIT
-            </Button>
-          </Form.Item>
-        </Form>
+            <div class="group">
+              <label for="user" class="label">
+                Username
+              </label>
+              <input
+                id="user"
+                type="text"
+                class="input"
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <div class="group">
+              <label for="pass" class="label">
+                Password
+              </label>
+              <input
+                id="pass"
+                type="password"
+                class="input"
+                data-type="password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div class="group">
+              <input
+                id="check"
+                type="checkbox"
+                class="check"
+                valuPropName="checked"
+              />
+              <label for="check" style={{ color: "#0A1551" }}>
+                <span
+                  class="icon"
+                  style={{
+                    backgroundColor: "rgba(128, 128, 128, 0.24)",
+                    color: "#0A1551",
+                  }}
+                ></span>{" "}
+                Remember Me{" "}
+              </label>
+            </div>
+            <div class="group">
+              <input
+                type="submit"
+                class="button"
+                value="Sign In"
+                onClick={() => sendLoginRequest()}
+              />
+            </div>
+            <div class="hr"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
