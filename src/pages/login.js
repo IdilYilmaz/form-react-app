@@ -39,6 +39,7 @@ const Login = () => {
 
     
    /*
+    localStorage.setItem("avatarUrl", "http://www.jotform.com/images/avatars/avatar-27.png");
     localStorage.setItem("apiKey", "c9058ea723befc280bdb13b7e542c321");
     window.location.pathname = "/forms";
     */
